@@ -1,0 +1,33 @@
+{
+  "name": "ai-agents",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node --env-file .env --experimental-strip-types src/server.ts",
+    "dev": "node --env-file .env --experimental-strip-types --watch src/server.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gustavo-Jezini/ai-agents.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gustavo-Jezini/ai-agents/issues"
+  },
+  "homepage": "https://github.com/Gustavo-Jezini/ai-agents#readme",
+  "devDependencies": {
+    "@biomejs/biome": "2.0.6",
+    "@types/node": "^24.0.10",
+    "typescript": "^5.8.3",
+    "ultracite": "5.0.32"
+  },
+  "dependencies": {
+    "@fastify/cors": "^11.0.1",
+    "fastify": "^5.4.0",
+    "fastify-type-provider-zod": "^5.0.1",
+    "zod": "^3.25.76"
+  }
+}
