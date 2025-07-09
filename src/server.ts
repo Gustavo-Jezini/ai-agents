@@ -20,7 +20,4 @@ app.get('/health', () => {
   return 'OK';
 });
 
-app.listen({ port: env.PORT }).then(() => {
-  console.log(`Port ${env.PORT}!`);
-  console.log('HTTP server running!');
-});
+app.listen({ port: env.PORT });

@@ -3,9 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "start": "node --env-file .env --experimental-strip-types src/server.ts",
-    "dev": "node --env-file .env --experimental-strip-types --watch src/server.ts"
+    "start": "node --env-file .env --experimental-strip-types --no-warnings src/server.ts",
+    "dev": "node --env-file .env --experimental-strip-types --watch --no-warnings src/server.ts",
+    "db:seed": "node --env-file .env --experimental-strip-types --no-warnings src/db/seed.ts"
   },
   "repository": {
     "type": "git",
@@ -21,13 +23,17 @@
   "devDependencies": {
     "@biomejs/biome": "2.0.6",
     "@types/node": "^24.0.10",
+    "drizzle-kit": "^0.31.4",
+    "drizzle-seed": "^0.3.1",
     "typescript": "^5.8.3",
     "ultracite": "5.0.32"
   },
   "dependencies": {
     "@fastify/cors": "^11.0.1",
+    "drizzle-orm": "^0.44.2",
     "fastify": "^5.4.0",
     "fastify-type-provider-zod": "^5.0.1",
+    "postgres": "^3.4.7",
     "zod": "^3.25.76"
   }
 }
