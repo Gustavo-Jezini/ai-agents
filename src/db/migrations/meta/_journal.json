@@ -15,6 +15,13 @@
       "when": 1752099730958,
       "tag": "0001_rapid_magus",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1752357191256,
+      "tag": "0002_overjoyed_kate_bishop",
+      "breakpoints": true
     }
   ]
 }
