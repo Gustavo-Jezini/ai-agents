@@ -1,0 +1,42 @@
+# Variables
+@baseUrl = http://localhost:3333
+
+# Health check
+GET {{baseUrl}}/health
+
+###
+
+# Get rooms
+GET {{baseUrl}}/rooms
+
+###
+
+# Create room
+# @name createRoom
+POST {{baseUrl}}/rooms
+Accept: application/json
+Content-Type: application/json
+
+{
+  "name": "Teste",
+  "description": "Descrição lorem bla bla"
+}
+
+###
+
+@roomId = {{createRoom.response.body.$.roomId}}
+
+# Get rooms questions
+GET {{baseUrl}}/rooms/{{roomId}}/questions
+
+###
+
+# Create question
+# @name createQuestion
+POST {{baseUrl}}/rooms/6f05315b-1442-4bfa-af46-cf39d951f59e/questions
+Accept: application/json
+Content-Type: application/json
+
+{
+  "question": "O que são aves?"
+}
